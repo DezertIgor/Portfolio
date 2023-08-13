@@ -1,0 +1,1059 @@
+{
+	"info": {
+		"_postman_id": "aadd91f0-a494-440f-b3b0-ecb18969db1e",
+		"name": "Яндекс",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26899356"
+	},
+	"item": [
+		{
+			"name": "Валидные проверки",
+			"item": [
+				{
+					"name": "В теле только широта, долгота и язык",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Богатяновка (нет)\", function() {\r",
+									"    pm.expect(pm.response.json().geo_object.district.name).to.eql(\"Богатяновка\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Статус-код 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Yandex-API-Key",
+								"value": "{{key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    {{Богатяновка}},\r\n\"lang\": \"ru_RU\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.weather.yandex.ru/v2/forecast?",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weather",
+								"yandex",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Приём системой дробных координат",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Статус-код 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Yandex-API-Key",
+								"value": "{{key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"lat\": 55.01,\r\n\"lon\": 50.9,\r\n\"lang\": \"ru_RU\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.weather.yandex.ru/v2/forecast?",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weather",
+								"yandex",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Все параметры в теле",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Статус-код 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Количество дней прогноза совпадает с выставленным в запросе лимитом\", function() {\r",
+									"    pm.expect(pm.response.json().forecasts.length).to.eql(pm.collectionVariables.get(\"лимит\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"лимит\", JSON.parse(pm.request.body.raw).limit);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Yandex-API-Key",
+								"value": "{{key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"lat\": 55,\r\n\"lon\": 50,\r\n\"lang\": \"ru_RU\",\r\n\"limit\": 7,\r\n\"hours\": false,\r\n\"extra\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.weather.yandex.ru/v2/forecast?",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weather",
+								"yandex",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Изменение лимита дней",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Богатяновка\", function() {\r",
+									"    pm.expect(pm.response.json().geo_object.district.name).to.eql(\"Богатяновка\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Статус-код 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Количество дней прогноза совпадает с выставленным в запросе лимитом\", function() {\r",
+									"    pm.expect(pm.response.json().forecasts.length).to.eql(pm.collectionVariables.get(\"лимит\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"лимит\", JSON.parse(pm.request.body.raw).limit);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Yandex-API-Key",
+								"value": "{{key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"lat\": 55,\r\n\"lon\": 50,\r\n\"lang\": \"ru_RU\",\r\n\"limit\": 1,\r\n\"hours\": false,\r\n\"extra\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.weather.yandex.ru/v2/forecast?",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weather",
+								"yandex",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Сверка координат",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Статус-код 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Совпадение ШИРОТЫ из запроса с данными ответа\", function() {\r",
+									"    pm.expect(pm.response.json().info.lat).to.eql(JSON.parse(pm.request.body.raw).lat)\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Совпадение ДОЛГОТЫ из запроса с данными ответа\", function() {\r",
+									"    pm.expect(pm.response.json().info.lon).to.eql(JSON.parse(pm.request.body.raw).lon)\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"лимит\", JSON.parse(pm.request.body.raw).limit);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Yandex-API-Key",
+								"value": "{{key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"lat\": 55,\r\n\"lon\": 50,\r\n\"lang\": \"ru_RU\",\r\n\"limit\": 7,\r\n\"hours\": false,\r\n\"extra\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.weather.yandex.ru/v2/forecast?",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weather",
+								"yandex",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Другой конкретный город",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Салем\", function() {\r",
+									"    pm.expect(pm.response.json().geo_object.district.name).to.eql(\"Сейлем\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Статус-код 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Yandex-API-Key",
+								"value": "{{key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    {{Салем}},\r\n\"lang\": \"ru_RU\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.weather.yandex.ru/v2/forecast?",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weather",
+								"yandex",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "С почасовым прогнозом",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Статус-код 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Почасовой прогноз присутствует и заполнен\", function() {\r",
+									"    const почасовые = pm.response.json().forecasts;\r",
+									"   {\r",
+									"        for (const forecast of почасовые) {\r",
+									"            if (forecast.hasOwnProperty(\"hours\") && forecast.hours.length > 0) {\r",
+									"                pm.expect(forecast.hours).to.not.be.empty;\r",
+									"            }\r",
+									"        }\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"лимит\", JSON.parse(pm.request.body.raw).limit);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Yandex-API-Key",
+								"value": "{{key}}",
+								"type": "text"
+							},
+							{
+								"key": "hours",
+								"value": "true",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"lat\": 55,\r\n\"lon\": 50,\r\n\"lang\": \"ru_RU\",\r\n\"limit\": 1,\r\n\"hours\": true,\r\n\"extra\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.weather.yandex.ru/v2/forecast?",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weather",
+								"yandex",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "БЕЗ почасового прогноза",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Статус-код 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Почасовые прогнозы ОТСУТСТВУЮТ ЛИБО ПУСТЫ\", function() {\r",
+									"    const почасовые = pm.response.json().forecasts;\r",
+									"    {\r",
+									"        let почасовыеПусты = true;\r",
+									"        for (const forecast of почасовые) {\r",
+									"            if (forecast.hasOwnProperty(\"hours\") && forecast.hours.length > 0) {\r",
+									"                почасовыеПусты = false;\r",
+									"                pm.expect(forecast.hours).to.not.be.empty;\r",
+									"            }\r",
+									"        }\r",
+									"        if (почасовыеПусты) {\r",
+									"            pm.expect(почасовые).to.not.have.property(\"hours\");\r",
+									"        }\r",
+									"        else {\r",
+									"            pm.expect(почасовые).to.have.property(\"hours\");\r",
+									"        }\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"лимит\", JSON.parse(pm.request.body.raw).limit);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Yandex-API-Key",
+								"value": "{{key}}",
+								"type": "text"
+							},
+							{
+								"key": "hours",
+								"value": "false",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"lat\": 55,\r\n\"lon\": 50,\r\n\"lang\": \"ru_RU\",\r\n\"limit\": 1,\r\n\"hours\": false,\r\n\"extra\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.weather.yandex.ru/v2/forecast?",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weather",
+								"yandex",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Невалидные проверки",
+			"item": [
+				{
+					"name": "Отрицательные координаты",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Статус-код 200\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"лимит\", JSON.parse(pm.request.body.raw).limit);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Yandex-API-Key",
+								"value": "{{key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"lat\": -55,\r\n\"lon\": -50,\r\n\"lang\": \"ru_RU\",\r\n\"limit\": 7,\r\n\"hours\": false,\r\n\"extra\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.weather.yandex.ru/v2/forecast?",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weather",
+								"yandex",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Запрос БЕЗ широты",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Статус-код 200\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"лимит\", JSON.parse(pm.request.body.raw).limit);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Yandex-API-Key",
+								"value": "{{key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"lon\": -50,\r\n\"lang\": \"ru_RU\",\r\n\"limit\": 7,\r\n\"hours\": false,\r\n\"extra\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.weather.yandex.ru/v2/forecast?",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weather",
+								"yandex",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Запрос БЕЗ долготы",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Статус-код 200\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"лимит\", JSON.parse(pm.request.body.raw).limit);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Yandex-API-Key",
+								"value": "{{key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"lat\": 55,\r\n\"lang\": \"ru_RU\",\r\n\"limit\": 7,\r\n\"hours\": false,\r\n\"extra\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.weather.yandex.ru/v2/forecast?",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weather",
+								"yandex",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Запрос БЕЗ языка/страны",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Статус-код 200\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"лимит\", JSON.parse(pm.request.body.raw).limit);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Yandex-API-Key",
+								"value": "{{key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"lat\": 55,\r\n\"lon\": 50,\r\n\"limit\": 7,\r\n\"hours\": false,\r\n\"extra\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.weather.yandex.ru/v2/forecast?",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weather",
+								"yandex",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не существующие координаты",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Статус-код 200\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"лимит\", JSON.parse(pm.request.body.raw).limit);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Yandex-API-Key",
+								"value": "{{key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"lat\": 361,\r\n\"lon\": 999,\r\n\"lang\": \"ru_RU\",\r\n\"limit\": 7,\r\n\"hours\": false,\r\n\"extra\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.weather.yandex.ru/v2/forecast?",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weather",
+								"yandex",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не существующие язык/страна",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Статус-код 200\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"лимит\", JSON.parse(pm.request.body.raw).limit);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Yandex-API-Key",
+								"value": "{{key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"lat\": 361,\r\n\"lon\": 999,\r\n\"lang\": \"oy_YO\",\r\n\"limit\": 7,\r\n\"hours\": false,\r\n\"extra\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.weather.yandex.ru/v2/forecast?",
+							"protocol": "https",
+							"host": [
+								"api",
+								"weather",
+								"yandex",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "key",
+			"value": "be263656-bd32-41ae-ac8d-d023c7e77445",
+			"type": "string"
+		},
+		{
+			"key": "Богатяновка",
+			"value": "\"lat\": 55,\n\"lon\": 50",
+			"type": "string"
+		},
+		{
+			"key": "лимит",
+			"value": ""
+		},
+		{
+			"key": "Салем",
+			"value": "\"lat\": 42,\n\"lon\": 70",
+			"type": "string"
+		}
+	]
+}
