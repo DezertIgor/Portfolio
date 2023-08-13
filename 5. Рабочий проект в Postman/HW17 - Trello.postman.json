@@ -1,0 +1,415 @@
+{
+	"info": {
+		"_postman_id": "745b6f15-e2e9-465b-a45f-6244b4988c68",
+		"name": "Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26899356"
+	},
+	"item": [
+		{
+			"name": "Доски",
+			"item": [
+				{
+					"name": "Создание (доска)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key=\"idD\"\r",
+									"var value=pm.response.json().id\r",
+									"pm.collectionVariables.set(key,value)\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{трелло}}/1/boards/?name=Доска",
+							"host": [
+								"{{трелло}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Доска"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получение (доска)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{трелло}}/1/boards/{{idD}}",
+							"host": [
+								"{{трелло}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"{{idD}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление (доска)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{трелло}}/1/boards/{{idD}}",
+							"host": [
+								"{{трелло}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"{{idD}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Списки",
+			"item": [
+				{
+					"name": "Создание (список)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"idS\"\r",
+									"var value=pm.response.json().id\r",
+									"pm.collectionVariables.set(key,value)\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{трелло}}/1/lists?name=Список&idBoard={{idD}}",
+							"host": [
+								"{{трелло}}"
+							],
+							"path": [
+								"1",
+								"lists"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Список"
+								},
+								{
+									"key": "idBoard",
+									"value": "{{idD}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получение (список)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{трелло}}/1/lists/{{idS}}",
+							"host": [
+								"{{трелло}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"{{idS}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ВСЕ листы для дальнейшего переноса в них карточки",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key=\"idS2\"\r",
+									"var value=pm.response.json()[2].id\r",
+									"pm.collectionVariables.set(key,value)\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{трелло}}/1/boards/{{idD}}/lists",
+							"host": [
+								"{{трелло}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"{{idD}}",
+								"lists"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Карточки",
+			"item": [
+				{
+					"name": "Создание (карточка)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key=\"idK\"\r",
+									"var value=pm.response.json().id\r",
+									"pm.collectionVariables.set(key,value)\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{трелло}}/1/cards?idList={{idS}}&name=Карточка",
+							"host": [
+								"{{трелло}}"
+							],
+							"path": [
+								"1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "idList",
+									"value": "{{idS}}"
+								},
+								{
+									"key": "name",
+									"value": "Карточка"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление (карточка)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{трелло}}/1/cards/{{idK}}",
+							"host": [
+								"{{трелло}}"
+							],
+							"path": [
+								"1",
+								"cards",
+								"{{idK}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Переименование (карточка)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{трелло}}/1/cards/{{idK}}?name=Другое название карточки",
+							"host": [
+								"{{трелло}}"
+							],
+							"path": [
+								"1",
+								"cards",
+								"{{idK}}"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Другое название карточки"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Изменение списка (карточка)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{трелло}}/1/cards/{{idK}}?idList={{idS2}}",
+							"host": [
+								"{{трелло}}"
+							],
+							"path": [
+								"1",
+								"cards",
+								"{{idK}}"
+							],
+							"query": [
+								{
+									"key": "idList",
+									"value": "{{idS2}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получение информации (карточка)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{трелло}}/1/cards/{{idK}}",
+							"host": [
+								"{{трелло}}"
+							],
+							"path": [
+								"1",
+								"cards",
+								"{{idK}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Добавление комментария (карточка)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key=\"idC\"\r",
+									"var value=pm.response.json().id\r",
+									"pm.collectionVariables.set(key,value)\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{трелло}}/1/cards/{{idK}}/actions/comments?text=Комментарий бла-бла",
+							"host": [
+								"{{трелло}}"
+							],
+							"path": [
+								"1",
+								"cards",
+								"{{idK}}",
+								"actions",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "Комментарий бла-бла"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "трелло",
+			"value": "https://trello.com",
+			"type": "string"
+		},
+		{
+			"key": "idD",
+			"value": ""
+		},
+		{
+			"key": "idS",
+			"value": ""
+		},
+		{
+			"key": "idK",
+			"value": ""
+		},
+		{
+			"key": "idS2",
+			"value": ""
+		},
+		{
+			"key": "idC",
+			"value": ""
+		}
+	]
+}
