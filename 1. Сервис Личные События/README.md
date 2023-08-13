@@ -29,13 +29,13 @@
 
 ## Декомпозиция
 [Доска Miro](https://miro.com/app/board/uXjVMaEcufo=/?share_link_id=58164387400)
-![Доска Miro](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%202%20Miro.png "Доска Miro")
+![Доска Miro](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/1.%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%202%20Miro.png "Доска Miro")
  
 
 ### Тест-план
 #### Объект тестирования
 Продукт: интеграция функционала “Личные события” в расписание преподавателя SkyEng.
- ![расписание преподавателя SkyEng](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%201%20%D0%9F%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%20%D1%80%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5.png "расписание преподавателя SkyEng")
+ ![расписание преподавателя SkyEng](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/1.%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%201%20%D0%9F%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%20%D1%80%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5.png "расписание преподавателя SkyEng")
 
 Заказчик: компания SkyPro / SkyEng.
 
@@ -87,10 +87,10 @@ Smoke\-тестирование    | 27\.03\.2023
 
 ### Тестовая документация
 [Чек-лист (Функциональное тестирование) Sitechco](https://chlist.sitechco.ru/project/40406/checklist/1461578/details)
-![Чек-лист (Функциональное тестирование) Sitechco](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%204%20%D0%9E%D1%82%D1%87%D1%91%D1%82%20Sitechco.png "Чек-лист (Функциональное тестирование) Sitechco")
+![Чек-лист (Функциональное тестирование) Sitechco](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/1.%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%204%20%D0%9E%D1%82%D1%87%D1%91%D1%82%20Sitechco.png "Чек-лист (Функциональное тестирование) Sitechco")
 
 [Тест-сьюты Qase](https://app.qase.io/project/CW1?previewMode=side&suite=1)
-![Тест-сьюты Qase](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%203%20Qase.io%20%D0%A2%D0%B5%D1%81%D1%82-%D1%81%D1%8C%D1%8E%D1%82%D1%8B.png "Тест-сьюты Qase")
+![Тест-сьюты Qase](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/1.%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%203%20Qase.io%20%D0%A2%D0%B5%D1%81%D1%82-%D1%81%D1%8C%D1%8E%D1%82%D1%8B.png "Тест-сьюты Qase")
 
 [Чек-лист (Регрессионное тестирование) Sitechco](https://chlist.sitechco.ru/project/40406/checklist/1464012/details)
 
