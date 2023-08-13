@@ -27,14 +27,14 @@
 ## Декомпозиция
 
 [Доска Miro](https://miro.com/app/board/uXjVMaEcufo=/?share_link_id=58164387400)
-![Доска Miro](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/1.%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%202%20Miro.png "Доска Miro")
+![Доска Miro](./Демо%202%20Miro.png "Доска Miro")
 
 ### Тест-план
 
 #### Объект тестирования
 
 Продукт: интеграция функционала “Личные события” в расписание преподавателя SkyEng.
-![расписание преподавателя SkyEng](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/1.%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%201%20%D0%9F%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%20%D1%80%D0%B0%D1%81%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5.png "расписание преподавателя SkyEng")
+![расписание преподавателя SkyEng](./Демо%201%20Продукт%20расписание.png "расписание преподавателя SkyEng")
 
 Заказчик: компания SkyPro / SkyEng.
 
@@ -85,22 +85,22 @@
 ### Тестовая документация
 
 [Чек-лист (Функциональное тестирование) Sitechco](https://chlist.sitechco.ru/project/40406/checklist/1461578/details)
-![Чек-лист (Функциональное тестирование) Sitechco](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/1.%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%204%20%D0%9E%D1%82%D1%87%D1%91%D1%82%20Sitechco.png "Чек-лист (Функциональное тестирование) Sitechco")
+![Чек-лист (Функциональное тестирование) Sitechco](./Демо%204%20Отчёт%20Sitechco.png "Чек-лист (Функциональное тестирование) Sitechco")
 
 [Тест-сьюты Qase](https://app.qase.io/project/CW1?previewMode=side&suite=1)
-![Тест-сьюты Qase](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/1.%20%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%203%20Qase.io%20%D0%A2%D0%B5%D1%81%D1%82-%D1%81%D1%8C%D1%8E%D1%82%D1%8B.png "Тест-сьюты Qase")
+![Тест-сьюты Qase](./Демо%203%20Qase.io%20Тест-сьюты.png "Тест-сьюты Qase")
 
 [Чек-лист (Регрессионное тестирование) Sitechco](https://chlist.sitechco.ru/project/40406/checklist/1464012/details)
 
-[Postman-коллекция с тест-кейсами для API](https://github.com/DezertIgor/Portfolio/blob/main/%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F%20Postman-%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F.json)
+[Postman-коллекция с тест-кейсами для API](./Личные%20события%20Postman-коллекция.json)
 
-![](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%205%20Postman%20%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B0.png)
+![Postman-коллекция с тест-кейсами для API](./Демо%206%20Postman%20Пример%20скрипта.png "Postman-коллекция с тест-кейсами для API")
 
 Всем проверкам в описании их папки (“Documentation”) присвоен номер, соответствущий номеру проверки из чек-листа. А также эти же тест-кейсы созданы и подробно описаны в TMS [qase.io](https://app.qase.io/project/CW1?suite=3).
-![](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%208%20Postman%20%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B0.png)
+![](./Демо%208%20Postman%20Пример%20скрипта.png)
 
 В коллекции Postman широко используются переменные, различные предварительные и тестовые скрипты, в том числе калькулятор дат и времени, позволяющий легко проводить арифметические действия с ними и их переменными, сохраняя при этом необходимый для запроса формат.
-![](https://raw.githubusercontent.com/DezertIgor/Portfolio/main/%D0%A1%D0%B5%D1%80%D0%B2%D0%B8%D1%81%20%D0%9B%D0%B8%D1%87%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F/%D0%94%D0%B5%D0%BC%D0%BE%209%20Postman%20%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%B0.png)
+![](./Демо%209%20Postman%20Пример%20запроса.png)
 
 При прохождении тест-рана тестовая среда автоматически очищается от тестовых данных. Run со всеми проверками проводится полностью успешно.
 
