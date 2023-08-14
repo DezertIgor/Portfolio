@@ -1,0 +1,160 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1691920342879,3468,HTTP-запрос,200,OK,Нагрузочный тест 1-4,text,true,,695,197,9,9,https://httpbin.org/post,3465,0,461
+1691920343544,3752,HTTP-запрос,200,OK,Нагрузочный тест 1-5,text,true,,695,197,10,10,https://httpbin.org/post,3752,0,484
+1691920346350,1522,HTTP-запрос,200,OK,Нагрузочный тест 1-4,text,true,,695,197,11,11,https://httpbin.org/post,1522,0,0
+1691920344880,3976,HTTP-запрос,200,OK,Нагрузочный тест 1-7,text,true,,695,197,12,12,https://httpbin.org/post,3976,0,458
+1691920345546,4083,HTTP-запрос,200,OK,Нагрузочный тест 1-8,text,true,,695,197,14,14,https://httpbin.org/post,4083,0,459
+1691920347297,4092,HTTP-запрос,200,OK,Нагрузочный тест 1-5,text,true,,695,197,15,15,https://httpbin.org/post,4092,0,0
+1691920347548,3854,HTTP-запрос,200,OK,Нагрузочный тест 1-11,text,true,,695,197,15,15,https://httpbin.org/post,3854,0,457
+1691920346881,5026,HTTP-запрос,200,OK,Нагрузочный тест 1-10,text,true,,695,197,15,15,https://httpbin.org/post,5026,0,458
+1691920351394,716,HTTP-запрос,200,OK,Нагрузочный тест 1-5,text,true,,695,197,15,15,https://httpbin.org/post,716,0,0
+1691920340979,11525,HTTP-запрос,504,Gateway Time-out,Нагрузочный тест 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/",292,197,15,15,https://httpbin.org/post,11525,0,1376
+1691920349549,3215,HTTP-запрос,200,OK,Нагрузочный тест 1-14,text,true,,695,197,15,15,https://httpbin.org/post,3215,0,454
+1691920348857,3931,HTTP-запрос,200,OK,Нагрузочный тест 1-7,text,true,,695,197,15,15,https://httpbin.org/post,3931,0,0
+1691920350215,2826,HTTP-запрос,200,OK,Нагрузочный тест 1-15,text,true,,695,197,15,15,https://httpbin.org/post,2826,0,457
+1691920352764,1045,HTTP-запрос,200,OK,Нагрузочный тест 1-14,text,true,,695,197,15,15,https://httpbin.org/post,1045,0,0
+1691920351403,3443,HTTP-запрос,200,OK,Нагрузочный тест 1-11,text,true,,695,197,15,15,https://httpbin.org/post,3443,0,0
+1691920352789,2304,HTTP-запрос,200,OK,Нагрузочный тест 1-7,text,true,,695,197,15,15,https://httpbin.org/post,2304,0,0
+1691920354847,1146,HTTP-запрос,200,OK,Нагрузочный тест 1-11,text,true,,695,197,15,15,https://httpbin.org/post,1145,0,0
+1691920352505,5427,HTTP-запрос,200,OK,Нагрузочный тест 1-1,text,true,,695,197,15,15,https://httpbin.org/post,5427,0,0
+1691920355993,2437,HTTP-запрос,200,OK,Нагрузочный тест 1-11,text,true,,695,197,15,15,https://httpbin.org/post,2437,0,0
+1691920355094,4309,HTTP-запрос,200,OK,Нагрузочный тест 1-7,text,true,,695,197,15,15,https://httpbin.org/post,4309,0,0
+1691920349629,10150,HTTP-запрос,504,Gateway Time-out,Нагрузочный тест 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/",292,197,15,15,https://httpbin.org/post,10150,0,0
+1691920359404,2379,HTTP-запрос,200,OK,Нагрузочный тест 1-7,text,true,,695,197,15,15,https://httpbin.org/post,2379,0,0
+1691920351907,10149,HTTP-запрос,504,Gateway Time-out,Нагрузочный тест 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/",292,197,14,14,https://httpbin.org/post,10149,0,0
+1691920357933,5115,HTTP-запрос,200,OK,Нагрузочный тест 1-1,text,true,,695,197,14,14,https://httpbin.org/post,5115,0,0
+1691920353042,10149,HTTP-запрос,504,Gateway Time-out,Нагрузочный тест 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/",292,197,14,14,https://httpbin.org/post,10149,0,0
+1691920362057,3454,HTTP-запрос,200,OK,Нагрузочный тест 1-10,text,true,,695,197,14,14,https://httpbin.org/post,3454,0,0
+1691920347872,19671,HTTP-запрос,200,OK,Нагрузочный тест 1-4,text,true,,695,197,14,14,https://httpbin.org/post,19671,0,0
+1691920365512,2420,HTTP-запрос,200,OK,Нагрузочный тест 1-10,text,true,,695,197,14,14,https://httpbin.org/post,2420,0,0
+1691920367543,3165,HTTP-запрос,200,OK,Нагрузочный тест 1-4,text,true,,695,197,14,14,https://httpbin.org/post,3165,0,0
+1691920363191,10150,HTTP-запрос,504,Gateway Time-out,Нагрузочный тест 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/",292,197,14,14,https://httpbin.org/post,10150,0,0
+1691920358431,14940,HTTP-запрос,200,OK,Нагрузочный тест 1-11,text,true,,695,197,14,14,https://httpbin.org/post,14940,0,0
+1691920367933,10149,HTTP-запрос,504,Gateway Time-out,Нагрузочный тест 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/",292,197,13,13,https://httpbin.org/post,10149,0,0
+1691920373342,5773,HTTP-запрос,200,OK,Нагрузочный тест 1-15,text,true,,695,197,12,12,https://httpbin.org/post,5773,0,0
+1691920353810,26556,HTTP-запрос,200,OK,Нагрузочный тест 1-14,text,true,,695,197,12,12,https://httpbin.org/post,26556,0,0
+1691920370709,10149,HTTP-запрос,504,Gateway Time-out,Нагрузочный тест 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/",292,197,12,12,https://httpbin.org/post,10149,0,0
+1691920380368,992,HTTP-запрос,200,OK,Нагрузочный тест 1-14,text,true,,695,197,11,11,https://httpbin.org/post,992,0,0
+1691920379115,2508,HTTP-запрос,200,OK,Нагрузочный тест 1-15,text,true,,695,197,11,11,https://httpbin.org/post,2508,0,0
+1691920344213,39492,HTTP-запрос,200,OK,Нагрузочный тест 1-6,text,true,,695,197,10,10,https://httpbin.org/post,39492,0,488
+1691920383706,2083,HTTP-запрос,200,OK,Нагрузочный тест 1-6,text,true,,695,197,10,10,https://httpbin.org/post,2083,0,0
+1691920381361,5239,HTTP-запрос,200,OK,Нагрузочный тест 1-14,text,true,,695,197,10,10,https://httpbin.org/post,5239,0,0
+1691920341545,46538,HTTP-запрос,200,OK,Нагрузочный тест 1-2,text,true,,695,197,9,9,https://httpbin.org/post,46538,0,818
+1691920348214,41043,HTTP-запрос,200,OK,Нагрузочный тест 1-12,text,true,,695,197,9,9,https://httpbin.org/post,41043,0,452
+1691920348881,40496,HTTP-запрос,200,OK,Нагрузочный тест 1-13,text,true,,695,197,9,9,https://httpbin.org/post,40496,0,485
+1691920389378,2538,HTTP-запрос,200,OK,Нагрузочный тест 1-13,text,true,,695,197,9,9,https://httpbin.org/post,2538,0,0
+1691920389257,2869,HTTP-запрос,200,OK,Нагрузочный тест 1-12,text,true,,695,197,9,9,https://httpbin.org/post,2869,0,0
+1691920359780,33450,HTTP-запрос,200,OK,Нагрузочный тест 1-8,text,true,,695,197,9,9,https://httpbin.org/post,33450,0,0
+1691920385789,10159,HTTP-запрос,504,Gateway Time-out,Нагрузочный тест 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/",292,197,9,9,https://httpbin.org/post,10159,0,0
+1691920392127,5105,HTTP-запрос,200,OK,Нагрузочный тест 1-12,text,true,,695,197,9,9,https://httpbin.org/post,5105,0,0
+1691920393230,5312,HTTP-запрос,200,OK,Нагрузочный тест 1-8,text,true,,695,197,9,9,https://httpbin.org/post,5312,0,0
+1691920342211,56359,HTTP-запрос,200,OK,Нагрузочный тест 1-3,text,true,,695,197,9,9,https://httpbin.org/post,56359,0,457
+1691920352111,47690,HTTP-запрос,200,OK,Нагрузочный тест 1-5,text,true,,695,197,9,9,https://httpbin.org/post,47690,0,0
+1691920395949,4215,HTTP-запрос,200,OK,Нагрузочный тест 1-6,text,true,,695,197,9,9,https://httpbin.org/post,4215,0,0
+1691920399802,1881,HTTP-запрос,200,OK,Нагрузочный тест 1-5,text,true,,695,197,9,9,https://httpbin.org/post,1881,0,0
+1691920398571,3408,HTTP-запрос,200,OK,Нагрузочный тест 1-3,text,true,,695,197,8,8,https://httpbin.org/post,3408,0,0
+1691920397233,4982,HTTP-запрос,200,OK,Нагрузочный тест 1-12,text,true,,695,197,8,8,https://httpbin.org/post,4982,0,0
+1691920401979,584,HTTP-запрос,200,OK,Нагрузочный тест 1-3,text,true,,695,197,8,8,https://httpbin.org/post,583,0,0
+1691920400165,3089,HTTP-запрос,200,OK,Нагрузочный тест 1-6,text,true,,695,197,8,8,https://httpbin.org/post,3089,0,0
+1691920402216,2587,HTTP-запрос,200,OK,Нагрузочный тест 1-12,text,true,,695,197,7,7,https://httpbin.org/post,2587,0,0
+1691920346214,60605,HTTP-запрос,504,Gateway Time-out,Нагрузочный тест 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/",292,197,6,6,https://httpbin.org/post,60605,0,456
+1691920402563,5129,HTTP-запрос,200,OK,Нагрузочный тест 1-3,text,true,,695,197,6,6,https://httpbin.org/post,5129,0,400
+1691920406820,5677,HTTP-запрос,200,OK,Нагрузочный тест 1-9,text,true,,695,197,6,6,https://httpbin.org/post,5677,0,323
+1691920412500,2469,HTTP-запрос,200,OK,Нагрузочный тест 1-9,text,true,,695,197,6,6,https://httpbin.org/post,2469,0,0
+1691920407692,10159,HTTP-запрос,504,Gateway Time-out,Нагрузочный тест 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/",292,197,6,6,https://httpbin.org/post,10159,0,0
+1691920391917,27488,HTTP-запрос,200,OK,Нагрузочный тест 1-13,text,true,,695,197,5,5,https://httpbin.org/post,27488,0,0
+1691920419405,1822,HTTP-запрос,200,OK,Нагрузочный тест 1-13,text,true,,695,197,5,5,https://httpbin.org/post,1822,0,321
+1691920363049,58863,HTTP-запрос,200,OK,Нагрузочный тест 1-1,text,true,,695,197,5,5,https://httpbin.org/post,58863,0,0
+1691920421228,1236,HTTP-запрос,200,OK,Нагрузочный тест 1-13,text,true,,695,197,5,5,https://httpbin.org/post,1236,0,0
+1691920414970,10160,HTTP-запрос,504,Gateway Time-out,Нагрузочный тест 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/",292,197,4,4,https://httpbin.org/post,10160,0,0
+1691920398543,27123,HTTP-запрос,200,OK,Нагрузочный тест 1-8,text,true,,695,197,4,4,https://httpbin.org/post,27123,0,0
+1691920421913,10449,HTTP-запрос,504,Gateway Time-out,Нагрузочный тест 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/",292,197,3,3,https://httpbin.org/post,10449,0,301
+1691920425130,10159,HTTP-запрос,504,Gateway Time-out,Нагрузочный тест 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/",292,197,2,2,https://httpbin.org/post,10159,0,0
+1691920388083,60159,HTTP-запрос,504,Gateway Time-out,Нагрузочный тест 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[504]]]
+
+****** comparison: [[[200]]]
+
+/",292,197,1,1,https://httpbin.org/post,60159,0,0
+1691920448242,4527,HTTP-запрос,200,OK,Нагрузочный тест 1-2,text,true,,695,197,1,1,https://httpbin.org/post,4527,0,303
+1691920452769,3583,HTTP-запрос,200,OK,Нагрузочный тест 1-2,text,true,,695,197,1,1,https://httpbin.org/post,3583,0,0
+1691920456353,834,HTTP-запрос,200,OK,Нагрузочный тест 1-2,text,true,,695,197,1,1,https://httpbin.org/post,834,0,0
