@@ -1,0 +1,168 @@
+{
+  "uuid": "fa95c34b-5042-4449-a7a4-891c41e01c8e",
+  "lastMigration": 27,
+  "name": "ToDo List",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "a90ca154-91c7-414a-83dc-2b0957f5a41a",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "5a23f90b-9b54-4a0c-9507-dd3b30a8eb9f",
+          "body": "[\n  {\n    \"id\": 1,\n    \"title\": \"Тинки-Винки\",\n    \"completed\": false,\n    \"order\": null,\n    \"url\": \"/1\"\n  },\n  {\n    \"id\": 2,\n    \"title\": \"Ляля\",\n    \"completed\": false,\n    \"order\": null,\n    \"url\": \"/2\"\n  },\n  {\n    \"id\": 3,\n    \"title\": \"По\",\n    \"completed\": false,\n    \"order\": null,\n    \"url\": \"/3\"\n  },\n  {\n    \"id\": 4,\n    \"title\": \"Дипси\",\n    \"completed\": false,\n    \"order\": null,\n    \"url\": \"/4\"\n  },\n  {\n    \"id\": 5,\n    \"title\": \"Солнышко\",\n    \"completed\": true,\n    \"order\": null,\n    \"url\": \"/5\"\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Отображение списка задач",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "faf44c9a-c431-491e-bff0-208c6b92e3b0",
+          "body": "[]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Empty list",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "result",
+              "value": "empty list",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "be6aa1c9-e17b-4c5e-8067-2452f0ed8ff0",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "baf20343-09c8-4788-b142-ba269786f35e",
+          "body": "{{setVar 'ID' (faker 'datatype.uuid')}}\n{\n  \"id\": \"{{getVar 'ID'}}\",\n  \"title\": \"{{body \"title\"}}\",\n  \"completed\": false,\n  \"order\": null,\n  \"url\": \"/{{getVar 'ID'}}\"\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "Создание новой задачи",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "c730056a-aef0-48dd-9348-7686676eee7b",
+          "body": "{\n  \"message\": \"Недопустимое имя\"\n}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "Title \"ошибка\"",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "title",
+              "value": "ошибка",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "a90ca154-91c7-414a-83dc-2b0957f5a41a"
+    },
+    {
+      "type": "route",
+      "uuid": "be6aa1c9-e17b-4c5e-8067-2452f0ed8ff0"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
