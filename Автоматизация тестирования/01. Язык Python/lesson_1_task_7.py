@@ -1,22 +1,44 @@
-def один():
+def one():
     return 1
-def два():
+
+
+def two():
     return 2
-def три():
+
+
+def three():
     return 3
-def четыре():
+
+
+def four():
     return 4
-def пять():
+
+
+def five():
     return 5
-def шесть():
+
+
+def six():
     return 6
-def семь():
+
+
+def seven():
     return 7
-def восемь():
+
+
+def eight():
     return 8
-def девять():
+
+
+def nine():
     return 9
-def ноль():
+
+
+def zero():
     return 0
 
-print(восемь(), восемь(), ноль(), ноль(), пять(), пять(), пять(), три(), пять(), три(), пять(), sep='')
+
+print(
+    eight(), eight(), zero(), zero(), five(), five(), five(),
+    three(), five(), three(), five(),
+    sep='')

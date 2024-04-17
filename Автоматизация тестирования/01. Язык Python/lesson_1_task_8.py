@@ -1,3 +1,6 @@
-def функция(num):
+def function(num):
     print(num, end="")
-функция(8),функция(8),функция(0),функция(0),функция(5),функция(5),функция(5),функция(3),функция(5),функция(3),функция(5)
+
+
+function(8), function(8), function(0), function(0), function(5),
+function(5), function(5), function(3), function(5), function(3), function(5)
