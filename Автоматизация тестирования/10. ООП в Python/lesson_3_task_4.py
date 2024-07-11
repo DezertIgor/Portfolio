@@ -1,6 +1,6 @@
-from turtle import *
+from turtle import Turtle
 
-#Задать параметры))
+# Задать параметры))
 eye_color = "green"
 whiskers_lenth = 225
 
@@ -12,8 +12,8 @@ t.shape("turtle")
 
 t.up()
 t.forward(80)
- 
- # Глаза
+
+# Глаза
 t.begin_fill()
 t.fillcolor(eye_color)
 t.down()

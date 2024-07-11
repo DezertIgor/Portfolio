@@ -1,4 +1,6 @@
 from address import Address
+
+
 class Mailing():
     def __init__(self,
                  to_address: Address,

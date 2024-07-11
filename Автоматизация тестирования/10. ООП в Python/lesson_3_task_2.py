@@ -8,4 +8,4 @@ catalog.append(Smartphone('Samsung', 'Galaxy S7', '+79777777777'))
 catalog.append(Smartphone('Samsung', 'Galaxy S8', '+79888888888'))
 
 for i in catalog:
-    print (f'{i.mark} - {i.model}. {i.number}')
+    print(f'{i.mark} - {i.model}. {i.number}')
