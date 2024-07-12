@@ -7,14 +7,14 @@ class StringUtils:
         """
         Принимает на вход текст, делает первую букву заглавной и возвращает
         этот же текст
-        Пример: `capitilize("skypro") -> "Skypro"`
+        Пример: `capitilize("пример") -> "Пример"`
         """
         return string.capitalize()
 
     def trim(self, string: str) -> str:
         """
         Принимает на вход текст и удаляет пробелы в начале, если они есть
-        Пример: `trim("   skypro") -> "skypro"`
+        Пример: `trim("   пример") -> "пример"`
         """
         whitespace = " "
         while (string.startswith(whitespace)):
@@ -42,8 +42,8 @@ class StringUtils:
         Параметры: \n
             `string` - строка для обработки \n
             `symbol` - искомый символ \n
-        Пример 1: `contains("SkyPro", "S") -> True`
-        Пример 2: `contains("SkyPro", "U") -> False`
+        Пример 1: `contains("Пример", "П") -> True`
+        Пример 2: `contains("Пример", "ю") -> False`
         """
         res = False
         try:
@@ -59,8 +59,8 @@ class StringUtils:
         Параметры: \n
             `string` - строка для обработки \n
             `symbol` - искомый символ для удаления \n
-        Пример 1: `delete_symbol("SkyPro", "k") -> "SyPro"`
-        Пример 2: `delete_symbol("SkyPro", "Pro") -> "Sky"`
+        Пример 1: `delete_symbol("Пример", "р") -> "Пимер"`
+        Пример 2: `delete_symbol("Пример", "мер") -> "При"`
         """
         if (self.contains(string, symbol)):
             string = string.replace(symbol, "")
@@ -73,8 +73,8 @@ class StringUtils:
         Параметры: \n
             `string` - строка для обработки \n
             `symbol` - искомый символ \n
-        Пример 1: `starts_with("SkyPro", "S") -> True`
-        Пример 2: `starts_with("SkyPro", "P") -> False`
+        Пример 1: `starts_with("Пример", "П") -> True`
+        Пример 2: `starts_with("Пример", "Ж") -> False`
         """
         return string.startswith(symbol)
 
@@ -85,8 +85,8 @@ class StringUtils:
         Параметры: \n
             `string` - строка для обработки \n
             `symbol` - искомый символ \n
-        Пример 1: `end_with("SkyPro", "o") -> True`
-        Пример 2: `end_with("SkyPro", "y") -> False`
+        Пример 1: `end_with("Пример", "р") -> True`
+        Пример 2: `end_with("Пример", "е") -> False`
         """
         return string.endswith(symbol)
 
@@ -95,7 +95,7 @@ class StringUtils:
         Возвращает `True`, если строка пустая и `False` - если нет \n
         Пример 1: `is_empty("") -> True`
         Пример 2: `is_empty(" ") -> True`
-        Пример 3: `is_empty("SkyPro") -> False`
+        Пример 3: `is_empty("Пример") -> False`
         """
         string = self.trim(string)
         return string == ""
@@ -108,8 +108,8 @@ class StringUtils:
             `joiner` - разделитель элементов в строке. По умолчанию запятая
             (", ") \n
         Пример 1: `list_to_string([1,2,3,4]) -> "1, 2, 3, 4"`
-        Пример 2: `list_to_string(["Sky", "Pro"]) -> "Sky, Pro"`
-        Пример 3: `list_to_string(["Sky", "Pro"], "-") -> "Sky-Pro"`
+        Пример 2: `list_to_string(["При", "мер"]) -> "При, мер"`
+        Пример 3: `list_to_string(["При", "мер"], "-") -> "При-мер"`
         """
         string = ""
         length = len(lst)
