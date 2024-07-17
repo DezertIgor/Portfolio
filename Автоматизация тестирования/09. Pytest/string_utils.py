@@ -59,7 +59,7 @@ class StringUtils:
         Параметры: \n
             `string` - строка для обработки \n
             `symbol` - искомый символ для удаления \n
-        Пример 1: `delete_symbol("Пример", "р") -> "Пимер"`
+        Пример 1: `delete_symbol("Пример", "р") -> "Пиме"`
         Пример 2: `delete_symbol("Пример", "мер") -> "При"`
         """
         if (self.contains(string, symbol)):
