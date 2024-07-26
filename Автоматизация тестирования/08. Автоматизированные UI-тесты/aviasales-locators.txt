@@ -1,0 +1,7 @@
+Локатор логотипа (html-елемент, содержащий в себе значок и слово "авиасейлс") - .s__IfjHnfURFBTIihipyW2z
+Локатор поля "Откуда" - [placeholder='Откуда']
+Локатор поля "Куда" - [placeholder='Куда']
+Локатор поля "Когда" - [data-test-id='start-date-field']
+Локатор поля "Обратно" - [data-test-id="end-date-field"]
+Локатор чек-бокса "Открыть Ostrovok.ru в новой вкладке" - .s__w64hun7dAEyPy15sVIO1
+Локатор кнопки "Найти билеты" - [data-test-id="form-submit"]
