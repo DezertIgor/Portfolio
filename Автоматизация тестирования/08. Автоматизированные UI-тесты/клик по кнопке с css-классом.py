@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from time import sleep
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.firefox.service import Service as FirefoxService
@@ -14,8 +13,9 @@ browser = webdriver.Chrome(service=ChromeService(ChromeDriverManager().
 browser.maximize_window()
 browser.get("http://uitestingplayground.com/classattr")
 blue_button = browser.find_element(By.CSS_SELECTOR, '.btn-primary')
-blue_button.click()
-sleep(2)
+for i in range(0, 2):
+    blue_button.click()
+    browser.switch_to.alert.accept()
 
 
 # Firefox
@@ -26,5 +26,6 @@ browser = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().
 browser.maximize_window()
 browser.get("http://uitestingplayground.com/classattr")
 blue_button = browser.find_element(By.CSS_SELECTOR, '.btn-primary')
-blue_button.click()
-sleep(2)
+for i in range(0, 2):
+    blue_button.click()
+    browser.switch_to.alert.accept()
