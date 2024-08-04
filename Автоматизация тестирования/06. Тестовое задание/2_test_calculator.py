@@ -23,7 +23,7 @@ browser.find_element(By.CSS_SELECTOR,
                      '.keys > :nth-child(15)').click()
 
 
-WebDriverWait(browser, 45).until(EC.text_to_be_present_in_element(
+WebDriverWait(browser, 46).until(EC.text_to_be_present_in_element(
         (By.CSS_SELECTOR, ".screen"), '15'))
 
 

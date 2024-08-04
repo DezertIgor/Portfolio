@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
+
 browser = webdriver.Chrome(service=ChromeService(
         ChromeDriverManager().install()))
 
@@ -25,7 +26,7 @@ list = [
 for locator, value in list:
     browser.find_element(By.CSS_SELECTOR, locator).send_keys(value)
 
-browser.find_element(By.CSS_SELECTOR, '[type="submit"]').click()
+browser.find_element(By.TAG_NAME, "button").click()
 
 
 def test_red():
