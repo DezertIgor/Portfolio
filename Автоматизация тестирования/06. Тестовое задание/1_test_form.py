@@ -28,16 +28,24 @@ for locator, value in list:
 browser.find_element(By.CSS_SELECTOR, '[type="submit"]').click()
 
 
+must_be_red = browser.find_element(By.CSS_SELECTOR, "#zip-code"
+                                   ).value_of_css_property('background-color')
+
+
 def test_red():
-    assert browser.find_element(
-        By.CSS_SELECTOR, "#zip-code"
-        ).value_of_css_property('background-color') == 'rgb(248, 215, 218)'
+    assert must_be_red == 'rgba(248, 215, 218, 1)'
+
+
+must_be_green = browser.find_elements(By.CSS_SELECTOR, ".alert:not(#zip-code)")
+
+list_of_colors = []
+for elem in must_be_green:
+    list_of_colors.append(elem.value_of_css_property("background-color"))
 
 
 def test_green():
-    assert browser.find_element(
-        By.CSS_SELECTOR, ".alert:not(#zip-code)"
-        ).value_of_css_property('background-color') == 'rgb(209, 231, 221)'
+    for color in list_of_colors:
+        assert color == "rgba(209, 231, 221, 1)"
 
 
 browser.quit()
