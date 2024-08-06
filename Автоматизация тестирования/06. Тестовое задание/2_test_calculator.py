@@ -26,9 +26,11 @@ browser.find_element(By.CSS_SELECTOR,
 WebDriverWait(browser, 46).until(EC.text_to_be_present_in_element(
         (By.CSS_SELECTOR, ".screen"), '15'))
 
+result = browser.find_element(By.CSS_SELECTOR, '.screen').text
+
 
 def test():
-    assert browser.find_element(By.CSS_SELECTOR, '.screen').text == '15'
+    assert result == '15'
 
 
 browser.quit()
