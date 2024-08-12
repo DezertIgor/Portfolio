@@ -60,7 +60,7 @@ class Calculator():
         browser.get(
             "https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
 
-    def calculate_and_wait():
+    def calculate_and_wait(self):
         browser.find_element(By.CSS_SELECTOR, '#delay').clear()
         browser.find_element(By.CSS_SELECTOR, '#delay').send_keys('45')
         browser.find_element(By.CSS_SELECTOR,
