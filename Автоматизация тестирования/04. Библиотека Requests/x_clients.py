@@ -53,3 +53,7 @@ class Clients:
 
     def employee(self, id=''):
         return requests.get(self.url + 'employee/' + str(id))
+
+    def delete_company(self, token, id):
+        return requests.get(self.url + 'company/delete/' + str(id),
+                            headers=token)

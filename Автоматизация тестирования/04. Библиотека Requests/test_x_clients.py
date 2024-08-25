@@ -239,3 +239,12 @@ def test_edit_with_empty_isActive():
                              change["email"], change["url"],
                              change["phone"], ""
                              ).status_code == 400
+
+
+def test_delete():
+    assert api.delete_company(token, company_id).status_code == 202
+
+
+def test_clear():
+    last_emp = api.employee_list(company_id).json()[-1]
+    assert last_emp["id"] != employee_id
