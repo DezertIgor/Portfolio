@@ -26,7 +26,7 @@ list = [
 for locator, value in list:
     browser.find_element(By.CSS_SELECTOR, locator).send_keys(value)
 
-browser.find_element(By.TAG_NAME, "button").click()
+browser.find_element(By.CSS_SELECTOR, '[type="submit"]').click()
 
 
 must_be_red = browser.find_element(By.CSS_SELECTOR, "#zip-code"
