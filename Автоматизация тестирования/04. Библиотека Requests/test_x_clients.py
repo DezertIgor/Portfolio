@@ -86,7 +86,7 @@ def test_add_without_lastName():
                             ).status_code == 400
 
 
-def test_add_withou_middleName():
+def test_add_without_middleName():
     assert api.add_employee(token, emp["id"], emp["firstName"],
                             emp["lastName"], '',
                             emp["companyId"], emp["email"],
