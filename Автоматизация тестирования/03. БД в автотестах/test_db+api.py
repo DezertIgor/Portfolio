@@ -1,6 +1,5 @@
 from api import Clients
 from db import Db
-from time import sleep
 
 
 db = Db("postgresql://x_clients_user:95PM5lQE0NfzJWDQmLjbZ45ewrz1fLYa@dpg-cqsr9ulumphs73c2q40g-a.frankfurt-postgres.render.com/x_clients_db_fxd0")
@@ -12,8 +11,6 @@ token = api.auth()
 
 db.add_company()
 print(db.all_company()[-1])
-
-sleep(30)
 
 company_id = db.company_id()
 print(company_id)
@@ -87,7 +84,7 @@ def test_add_without_lastName():
     assert before == after
 
 
-def test_add_withou_middleName():
+def test_add_without_middleName():
     before = db.all_strings()
     assert api.add_employee(token, emp["id"], emp["firstName"],
                             emp["lastName"], '',
