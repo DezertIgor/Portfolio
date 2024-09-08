@@ -15,7 +15,7 @@ print(db.all_company()[-1])
 
 sleep(30)
 
-company_id = int(db.company_id())
+company_id = db.company_id()
 print(company_id)
 
 

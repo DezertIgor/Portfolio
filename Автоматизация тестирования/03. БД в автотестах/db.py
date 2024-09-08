@@ -9,9 +9,9 @@ class Db:
         return self.db.execute(text("""insert into company(\"name\") values ('Тестовая компания 556')"""))
 
     def company_id(self):
-        return self.db.execute(text("""select * from company
+        return int(self.db.execute(text("""select * from company
     where name = 'Тестовая компания 556'""")
-                               ).fetchall()[-1][0]
+                                   ).fetchall()[-1][0])
 
     def last_string(self):
         return self.db.execute(text("select * from employee")).fetchall()[-1]
@@ -45,8 +45,8 @@ class Db:
                                     :company_id, :birthdate)"""), self.emp)
 
     def employee_id(self, last_name):
-        return self.db.execute(text("""select * from employee where last_name = :l_name"""),
-                               {'l_name': last_name}).fetchall()[-1][5]
+        return int(self.db.execute(text("""select * from employee where last_name = :l_name"""),
+                                   {'l_name': last_name}).fetchall()[-1][5])
 
     def find_employee(self, last_name):
         return self.db.execute(text("""select * from employee where last_name = :l_name"""),
