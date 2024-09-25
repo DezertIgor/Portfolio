@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, text
 
 
 class Db:
-    def __init__(self, connection_string):
+    def __init__(self, connection_string: str):
         self.db = create_engine(connection_string, isolation_level="AUTOCOMMIT"
                                 ).connect()
 

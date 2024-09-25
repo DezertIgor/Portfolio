@@ -3,7 +3,7 @@ import requests
 
 class Clients:
 
-    def __init__(self, url) -> None:
+    def __init__(self, url: str) -> None:
         self.url = url
 
     def auth(self) -> str:
