@@ -1,4 +1,4 @@
-from PageObject import Calculator
+from UI_class import Calculator
 
 
 def test():

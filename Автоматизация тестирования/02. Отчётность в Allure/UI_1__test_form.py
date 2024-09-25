@@ -1,4 +1,4 @@
-from PageObject import Form
+from UI_class import Form
 
 
 def test():

@@ -13,11 +13,17 @@ browser = webdriver.Chrome(service=ChromeService(
 class Form():
 
     def get(self):
+        """
+            UI. Переход на страницу с формой
+        """
         browser.maximize_window()
         browser.get(
             "https://bonigarcia.dev/selenium-webdriver-java/data-types.html")
 
     def filling(self):
+        """
+            UI. Заполнение всех полей формы, кроме поля "Zip code"
+        """
         list = [
             ('[name="first-name"]', 'Иван'),
             ('[name="last-name"]', 'Петров'),
@@ -34,15 +40,24 @@ class Form():
             browser.find_element(By.CSS_SELECTOR, locator).send_keys(value)
 
     def click(self):
+        """
+            UI. Нажатие на кнопку "Submit"
+        """
         browser.find_element(By.TAG_NAME, "button").click()
 
-    def color_of_red_element(self):
+    def color_of_red_element(self) -> str:
+        """
+            UI. Получение цвета поля "Zip code"
+        """
         must_be_red = browser.find_element(By.CSS_SELECTOR, "#zip-code"
                                            ).value_of_css_property(
                                                'background-color')
         return must_be_red
 
-    def color_of_green_elements(self):
+    def color_of_green_elements(self) -> list:
+        """
+            UI. Получение списка цветов всех полей, кроме "Zip code"
+        """
         must_be_green = browser.find_elements(By.CSS_SELECTOR,
                                               ".alert:not(#zip-code)")
         list_of_colors = []
@@ -56,11 +71,17 @@ class Form():
 class Calculator():
 
     def get(self):
+        """
+            UI. Переход на страницу с калькулятором
+        """
         browser.maximize_window()
         browser.get(
             "https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
 
-    def calculate_and_wait(self):
+    def calculate_and_wait(self) -> str:
+        """
+            UI. Получение итогового значения
+        """
         browser.find_element(By.CSS_SELECTOR, '#delay').clear()
         browser.find_element(By.CSS_SELECTOR, '#delay').send_keys('45')
         browser.find_element(By.CSS_SELECTOR,
@@ -81,11 +102,17 @@ class Calculator():
 class Shop():
 
     def get(self):
+        """
+            UI. Переход на страницу авторизации магазина "Swag Labs"
+        """
         browser.maximize_window()
         browser.get(
             "https://www.saucedemo.com/")
 
     def auth(self):
+        """
+            UI. Авторизация пользователя
+        """
         browser.find_element(By.CSS_SELECTOR, '#user-name').send_keys(
             'standard_user')
         browser.find_element(By.CSS_SELECTOR, '#password').send_keys(
@@ -93,6 +120,9 @@ class Shop():
         browser.find_element(By.CSS_SELECTOR, '#login-button').click()
 
     def pick(self):
+        """
+            UI. Добавление товаров в корзину
+        """
         browser.find_element(By.CSS_SELECTOR,
                              '#add-to-cart-sauce-labs-backpack').click()
         browser.find_element(By.CSS_SELECTOR,
@@ -101,12 +131,18 @@ class Shop():
                              '#add-to-cart-sauce-labs-onesie').click()
 
     def cart(self):
+        """
+            UI. Переход к оплате
+        """
         browser.find_element(By.CSS_SELECTOR,
                              '.shopping_cart_link').click()
         browser.find_element(By.CSS_SELECTOR,
                              '#checkout').click()
 
-    def form_and_order(self):
+    def form_and_order(self) -> str:
+        """
+            UI. Заполнение формы оплаты
+        """
         browser.find_element(By.CSS_SELECTOR, '#first-name').send_keys('Игорь')
         browser.find_element(By.CSS_SELECTOR, '#last-name').send_keys('Васюта')
         browser.find_element(By.CSS_SELECTOR, '#postal-code').send_keys(

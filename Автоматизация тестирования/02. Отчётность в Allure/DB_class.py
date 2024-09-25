@@ -7,23 +7,42 @@ class Db:
                                 ).connect()
 
     def add_company(self):
-        return self.db.execute(text("""insert into company(\"name\") values ('Тестовая компания 556')"""))
+        """
+            DB. Добавление компании
+        """
+        return self.db.execute(text("""insert into company(\"name\")
+    values ('Тестовая компания 555')"""))
 
-    def company_id(self):
+    def company_id(self) -> int:
+        """
+            DB. Получение id добавленной ранее компании
+        """
         return int(self.db.execute(text("""select * from company
     where name = 'Тестовая компания 556'""")
                                    ).fetchall()[-1][0])
 
-    def last_string(self):
+    def last_string(self) -> list:
+        """
+            DB. Получение последнего из существующих сотрудников
+        """
         return self.db.execute(text("select * from employee")).fetchall()[-1]
 
-    def all_strings(self):
+    def all_strings(self) -> list:
+        """
+            DB. Получение списка всех сотрудников
+        """
         return len(self.db.execute(text("select * from employee")).fetchall())
 
-    def all_company(self):
+    def all_company(self) -> list:
+        """
+            DB. Получение списка всех сотрудников
+        """
         return self.db.execute(text("select * from company")).fetchall()
 
-    def add_employee(self, company_id):
+    def add_employee(self, company_id: int):
+        """
+            DB. Добавление сотрудника в организацию по её id
+        """
         self.emp = {
                     "is_active": True,
                     "first_name": 'Игнат',
@@ -44,10 +63,18 @@ class Db:
                                     :phone, :email, :avatar_url,
                                     :company_id, :birthdate)"""), self.emp)
 
-    def employee_id(self, last_name):
-        return int(self.db.execute(text("""select * from employee where last_name = :l_name"""),
+    def employee_id(self, last_name: str) -> int:
+        """
+            DB. Получение id сотрудника по его фамилии
+        """
+        return int(self.db.execute(text("""select * from employee
+    where last_name = :l_name"""),
                                    {'l_name': last_name}).fetchall()[-1][0])
 
-    def find_employee(self, last_name):
-        return self.db.execute(text("""select * from employee where last_name = :l_name"""),
+    def find_employee(self, last_name: str) -> list:
+        """
+            DB. Получение всей информации о сотруднике по его фамилии
+        """
+        return self.db.execute(text("""select * from employee
+    where last_name = :l_name"""),
                                {'l_name': last_name}).fetchall()[-1]

@@ -1,4 +1,4 @@
-from PageObject import Shop
+from UI_class import Shop
 
 
 def test():
