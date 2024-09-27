@@ -80,7 +80,8 @@ class Calculator():
 
     def calculate_and_wait(self) -> str:
         """
-            UI. Получение итогового значения
+            UI. Ввод данных, ожидание, получение итогового значения и закрытие
+            браузера
         """
         browser.find_element(By.CSS_SELECTOR, '#delay').clear()
         browser.find_element(By.CSS_SELECTOR, '#delay').send_keys('45')
