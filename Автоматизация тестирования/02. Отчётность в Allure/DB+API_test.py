@@ -360,7 +360,8 @@ def test_edit_without_all_values():
         # assert emp['email'] == db.find_employee('Васюков')[2]
         assert emp['url'] == db.find_employee('Васюков')[10]
         assert emp['phone'] == db.find_employee('Васюков')[7]
-        assert str(emp['birthdate'])[:10] == str(db.find_employee('Васюков')[9])
+        assert str(emp['birthdate'])[:10] == str(db.find_employee('Васюков')[9]
+                                                 )
         assert emp['isActive'] == db.find_employee('Васюков')[1]
 
 
@@ -434,7 +435,8 @@ def test_edit_without_isActive():
         # assert emp['email'] == db.find_employee('Васюков')[2]
         assert emp['url'] == db.find_employee('Васюков')[10]
         assert emp['phone'] == db.find_employee('Васюков')[7]
-        assert str(emp['birthdate'])[:10] == str(db.find_employee('Васюков')[9])
+        assert str(emp['birthdate'])[:10] == str(db.find_employee('Васюков')[9]
+                                                 )
         assert emp['isActive'] == db.find_employee('Васюков')[1]
 
 
