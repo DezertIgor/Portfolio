@@ -27,7 +27,7 @@ class Db:
         """
         return self.db.execute(text("select * from employee")).fetchall()[-1]
 
-    def all_strings(self) -> list:
+    def all_strings(self) -> int:
         """
             DB. Получение списка всех сотрудников
         """
