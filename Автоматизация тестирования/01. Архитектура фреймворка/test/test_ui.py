@@ -1,21 +1,26 @@
 from classes.ui import UI
-from time import sleep
+from classes.data import Data
 
+dat = Data().val
 ui = UI()
 
 
 def test_add_board():
     ui.auth()
-    assert ui.current_page() == "https://trello.com/u/user86102176/boards"
-    assert ui.add_board() == "+Доска"
+    assert ui.current_page() == dat("page")
+    assert ui.add_board() == dat("board")["name"]
 
 
 def test_add_card():
-    assert ui.add_card() == "+Карточка"
+    assert ui.add_card() == dat("card")["name"]
 
 
 def test_redact_card():
-    assert ui.redact_card() == "rgba(148, 199, 72, 1)"
+    assert ui.redact_card() == dat("color")
+
+
+def test_drag_and_drop_card():
+    ui.drag_card()
 
 
 def test_delete_card():
@@ -24,4 +29,3 @@ def test_delete_card():
 
 def test_delete_board():
     ui.delete_board()
-    sleep(10)

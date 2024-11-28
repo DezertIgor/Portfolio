@@ -1,6 +1,6 @@
 {
     "token":
-    {"cloud.session.token": "eyJraWQiOiJzZXNzaW9uLXNlcnZpY2UvcHJvZC0xNTkyODU4Mzk0IiwiYWxnIjoiUlMyNTYifQ.eyJhc3NvY2lhdGlvbnMiOltdLCJzdWIiOiI2M2JjMGY4ZDJhNTI2NjA4YzU0ZjY3NzIiLCJlbWFpbERvbWFpbiI6ImdtYWlsLmNvbSIsImltcGVyc29uYXRpb24iOltdLCJjcmVhdGVkIjoxNzMyMDM5OTEwLCJyZWZyZXNoVGltZW91dCI6MTczMjA0MDUxNiwidmVyaWZpZWQiOnRydWUsImlzcyI6InNlc3Npb24tc2VydmljZSIsInNlc3Npb25JZCI6IjQyNTQ2YjgwLWEzNjEtNGRkZi04MmQ1LWFiMGJkNjEzZmI5NCIsInN0ZXBVcHMiOltdLCJhdWQiOiJhdGxhc3NpYW4iLCJuYmYiOjE3MzIwMzk5MTYsImV4cCI6MTczNDYzMTkxNiwiaWF0IjoxNzMyMDM5OTE2LCJlbWFpbCI6InZhc2VrbmVudWJAZ21haWwuY29tIiwianRpIjoiNDI1NDZiODAtYTM2MS00ZGRmLTgyZDUtYWIwYmQ2MTNmYjk0In0.qD_ECmdvoADZqGOjIMbIU5YgONlxdPu78LTZgqcLPlS9oHIUmk7Tpp0uz_z6dyGN8aTbsIziZ8wYJLckwjbKLs6xhVW5CJgMR168zfM8WKZSdAfaBhdooUgoKPmBSnLu8mrH2nmVRzOQt8Su7sk-Qo_a6DdxaMB3EYe2OqG2rlxosAwoaWSpNEotNFzcyB5h3fDz5f2iu8MfLktRLIRBtJhzOyiSwVi92GT8xt4TD92qwaZ_cWaOUpF8aBalCtc8mZHT2CcPKCcKtkr4gVG7oX3mN5n0KskZeC9dFSUEGrrAYO8cDrg-ndUZ4K08lzGguermAJ1XmEiictA2YnWMIA"},
+    {"cloud.session.token": "eyJraWQiOiJzZXNzaW9uLXNlcnZpY2UvcHJvZC0xNTkyODU4Mzk0IiwiYWxnIjoiUlMyNTYifQ.eyJhc3NvY2lhdGlvbnMiOltdLCJzdWIiOiI2M2JjMGY4ZDJhNTI2NjA4YzU0ZjY3NzIiLCJlbWFpbERvbWFpbiI6ImdtYWlsLmNvbSIsImltcGVyc29uYXRpb24iOltdLCJjcmVhdGVkIjoxNzMyNDg3MjA2LCJyZWZyZXNoVGltZW91dCI6MTczMjcyMzc5NywidmVyaWZpZWQiOnRydWUsImlzcyI6InNlc3Npb24tc2VydmljZSIsInNlc3Npb25JZCI6IjVhN2U4ZjcyLWQ0Y2MtNGNhZC04ZjY1LWFhOTFmMTI0OGQ0YSIsInN0ZXBVcHMiOltdLCJhdWQiOiJhdGxhc3NpYW4iLCJuYmYiOjE3MzI3MjMxOTcsImV4cCI6MTczNTMxNTE5NywiaWF0IjoxNzMyNzIzMTk3LCJlbWFpbCI6InZhc2VrbmVudWJAZ21haWwuY29tIiwianRpIjoiNWE3ZThmNzItZDRjYy00Y2FkLThmNjUtYWE5MWYxMjQ4ZDRhIn0.Ih8xe_k_NBqhi0YSWm0sy1TrC9fWoiD9pcHZSNGKfIQwD5kYsqO26Gxy4YzwADqFMzdiosxGzvy3-x9CBXSb0sBrWLlH132eZvaQtqUpy4orDDSXeqmUH9rk_X2hYfJArBuqseiNldbw_PeU9K7JrStQnVWpIJhIqub7tU6tlOFYfYv76mF8QvXpTkHiKKEEsbxbXw8JxqEg6Qja4CIBiEdmYGlzLSsKVXKIbgBvJVBhS9v0BAlv0QSkaZ9HnSfcsaWO53Yu4wcGd1CNAmddHP_nzYky3xoSxKLgWzCBTik4U5e3i9WmVutxTDxuBmim9iCnrHMLmczBtNGpQoc40g"},
     "login": "vaseknenub@gmail.com",
     "password": "Lucifer153258789atl",
     "board":
@@ -27,5 +27,7 @@
     "board_url": "https://trello.com/1/boards/",
     "boards": "https://trello.com/1/member/me?fields=id&boards=open%2Cstarred&board_fields=id%2Cclosed%2CcreationMethod%2CdateLastActivity%2CdateLastView%2CdatePluginDisable%2CenterpriseOwned%2CidEnterprise%2CidOrganization%2Cname%2CnodeId%2Cprefs%2CpremiumFeatures%2CshortLink%2CshortUrl%2Cstarred%2Csubscribed%2Curl&board_memberships=me&boardStars=true&credits=invitation%2CpromoCode&organizations=all&organization_fields=id%2Ccredits%2CdisplayName%2CidEnterprise%2Climits%2ClogoHash%2Cname%2Coffering%2Cprefs%2CpremiumFeatures%2Cproducts",
     "list_url": "https://trello.com/1/lists/",
-    "card_url": "https://trello.com/1/cards/"
+    "card_url": "https://trello.com/1/cards/",
+    "page": "https://trello.com/u/user86102176/boards",
+    "color": "rgba(148, 199, 72, 1)"
 }
