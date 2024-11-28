@@ -1,29 +1,30 @@
 {
     "token":
-    {"cloud.session.token": "eyJraWQiOiJzZXNzaW9uLXNlcnZpY2UvcHJvZC0xNTkyODU4Mzk0IiwiYWxnIjoiUlMyNTYifQ.eyJhc3NvY2lhdGlvbnMiOltdLCJzdWIiOiI2M2JjMGY4ZDJhNTI2NjA4YzU0ZjY3NzIiLCJlbWFpbERvbWFpbiI6ImdtYWlsLmNvbSIsImltcGVyc29uYXRpb24iOltdLCJjcmVhdGVkIjoxNzMyNDg3MjA2LCJyZWZyZXNoVGltZW91dCI6MTczMjcyMzc5NywidmVyaWZpZWQiOnRydWUsImlzcyI6InNlc3Npb24tc2VydmljZSIsInNlc3Npb25JZCI6IjVhN2U4ZjcyLWQ0Y2MtNGNhZC04ZjY1LWFhOTFmMTI0OGQ0YSIsInN0ZXBVcHMiOltdLCJhdWQiOiJhdGxhc3NpYW4iLCJuYmYiOjE3MzI3MjMxOTcsImV4cCI6MTczNTMxNTE5NywiaWF0IjoxNzMyNzIzMTk3LCJlbWFpbCI6InZhc2VrbmVudWJAZ21haWwuY29tIiwianRpIjoiNWE3ZThmNzItZDRjYy00Y2FkLThmNjUtYWE5MWYxMjQ4ZDRhIn0.Ih8xe_k_NBqhi0YSWm0sy1TrC9fWoiD9pcHZSNGKfIQwD5kYsqO26Gxy4YzwADqFMzdiosxGzvy3-x9CBXSb0sBrWLlH132eZvaQtqUpy4orDDSXeqmUH9rk_X2hYfJArBuqseiNldbw_PeU9K7JrStQnVWpIJhIqub7tU6tlOFYfYv76mF8QvXpTkHiKKEEsbxbXw8JxqEg6Qja4CIBiEdmYGlzLSsKVXKIbgBvJVBhS9v0BAlv0QSkaZ9HnSfcsaWO53Yu4wcGd1CNAmddHP_nzYky3xoSxKLgWzCBTik4U5e3i9WmVutxTDxuBmim9iCnrHMLmczBtNGpQoc40g"},
+        {"cloud.session.token": "eyJraWQiOiJzZXNzaW9uLXNlcnZpY2UvcHJvZC0xNTkyODU4Mzk0IiwiYWxnIjoiUlMyNTYifQ.eyJhc3NvY2lhdGlvbnMiOltdLCJzdWIiOiI2M2JjMGY4ZDJhNTI2NjA4YzU0ZjY3NzIiLCJlbWFpbERvbWFpbiI6ImdtYWlsLmNvbSIsImltcGVyc29uYXRpb24iOltdLCJjcmVhdGVkIjoxNzMyODAxNjAzLCJyZWZyZXNoVGltZW91dCI6MTczMjgwMjIwMywidmVyaWZpZWQiOnRydWUsImlzcyI6InNlc3Npb24tc2VydmljZSIsInNlc3Npb25JZCI6ImY3MmFlZDEwLTJjMWYtNDQ0ZC05NTQ1LWQ4MDU0YTllNmRhZSIsInN0ZXBVcHMiOltdLCJhdWQiOiJhdGxhc3NpYW4iLCJuYmYiOjE3MzI4MDE2MDMsImV4cCI6MTczNTM5MzYwMywiaWF0IjoxNzMyODAxNjAzLCJlbWFpbCI6InZhc2VrbmVudWJAZ21haWwuY29tIiwianRpIjoiZjcyYWVkMTAtMmMxZi00NDRkLTk1NDUtZDgwNTRhOWU2ZGFlIn0.cYejlDRdOAZnK5eHFpcxSpleqM3WXZpS2feFS0BSdYMmPVb6CmbRCfUEVcQwFj7ILx9_9GOPZeN1pXK7mMNQlSV5CrYAqIy3XK9DS653PsRNDELwg9GYZ7wjAJ_-tvzOY5d2se15JFG7ktSn0h9ERYovnXC7c_5UH7c-Aogp6qSHUtRwANkdAhCkV2Vq2Q2P5s9-wQ2-yBGakvRM2x9Sy_WYMsngXp-lRM1_dl3mlVqNo9ZMHJNakmei8BTL8OFNoLCDYRhrlOjybiiOnGepa25h9jWcgRBFEFv6J81BwIdqK_u0T9IVW_KSAYXPjnVRaMdwL6PDBZDBG7x6Ffxsxg"},
     "login": "vaseknenub@gmail.com",
     "password": "Lucifer153258789atl",
     "board":
-    {"defaultLists":true,
-    "idOrganization":"64539e5750f4aa3260511f24",
-    "name":"+Доска",
-    "prefs_background_url":"https://images.unsplash.com/photo-1731176497854-f9ea4dd52eb6?ixid=M3w3MDY2fDB8MXxjb2xsZWN0aW9ufDF8MzE3MDk5fHx8fHwyfHwxNzMxOTQzMDQ2fA&ixlib=rb-4.0.3&w=2560&h=2048&q=90",
-    "prefs_permissionLevel":"org",
-    "prefs_selfJoin":true,
-    "dsc":"1675f190dadfee47d61bd2faf048755b2388dfe3291da14d5fb7eed04680d56f"},
+        {
+        "name":"+Доска",
+        "defaultLists":true,
+        "idOrganization":"64539e5750f4aa3260511f24",
+        "prefs_background_url":"https://images.unsplash.com/photo-1731176497854-f9ea4dd52eb6?ixid=M3w3MDY2fDB8MXxjb2xsZWN0aW9ufDF8MzE3MDk5fHx8fHwyfHwxNzMxOTQzMDQ2fA&ixlib=rb-4.0.3&w=2560&h=2048&q=90",
+        "prefs_permissionLevel":"org",
+        "prefs_selfJoin":true,
+        "dsc":"1675f190dadfee47d61bd2faf048755b2388dfe3291da14d5fb7eed04680d56f"},
     "list_name": "+Список",
     "next_list_name": "+Список2",
     "card":
-    {"name":"+Карточка",
-    "closed":false,
-    "isTemplate":false,
-    "cardRole":null},
+        {"name":"+Карточка",
+        "closed":false,
+        "isTemplate":false,
+        "cardRole":null},
     "change_card":
-    {"cover":
-    {"url": "https://images.unsplash.com/photo-1731600512388-aec36dce82b6?ixid=M3w3MDY2fDB8MXxjb2xsZWN0aW9ufDJ8MzE3MDk5fHx8fHwyfHwxNzMyMDI3NzE1fA&ixlib=rb-4.0.3&w=2560&h=2048&q=90"}
-    },
+        {"cover":
+            {"url": "https://images.unsplash.com/photo-1731600512388-aec36dce82b6?ixid=M3w3MDY2fDB8MXxjb2xsZWN0aW9ufDJ8MzE3MDk5fHx8fHwyfHwxNzMyMDI3NzE1fA&ixlib=rb-4.0.3&w=2560&h=2048&q=90"}
+        },
     "drag_card":
-    {"closed":false},
+        {"closed":false},
     "board_url": "https://trello.com/1/boards/",
     "boards": "https://trello.com/1/member/me?fields=id&boards=open%2Cstarred&board_fields=id%2Cclosed%2CcreationMethod%2CdateLastActivity%2CdateLastView%2CdatePluginDisable%2CenterpriseOwned%2CidEnterprise%2CidOrganization%2Cname%2CnodeId%2Cprefs%2CpremiumFeatures%2CshortLink%2CshortUrl%2Cstarred%2Csubscribed%2Curl&board_memberships=me&boardStars=true&credits=invitation%2CpromoCode&organizations=all&organization_fields=id%2Ccredits%2CdisplayName%2CidEnterprise%2Climits%2ClogoHash%2Cname%2Coffering%2Cprefs%2CpremiumFeatures%2Cproducts",
     "list_url": "https://trello.com/1/lists/",

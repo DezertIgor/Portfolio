@@ -1,7 +1,7 @@
 import json
 
-data_js = open('/Users/tk_user/git/Portfolio/Автоматизация тестирования/01. Архитектура фреймворка/test_data.json')
-data_py = json.load(data_js)
+with open('C:/Users/Ихарь/Documents/GitHub/Portfolio/Автоматизация тестирования/01. Архитектура фреймворка/test_data.json', encoding='utf-8') as data_js:
+    data_py = json.load(data_js)
 
 
 class Data:
