@@ -1,8 +1,8 @@
 {
     "token":
-        {"cloud.session.token": "eyJraWQiOiJzZXNzaW9uLXNlcnZpY2UvcHJvZC0xNTkyODU4Mzk0IiwiYWxnIjoiUlMyNTYifQ.eyJhc3NvY2lhdGlvbnMiOltdLCJzdWIiOiI2M2JjMGY4ZDJhNTI2NjA4YzU0ZjY3NzIiLCJlbWFpbERvbWFpbiI6ImdtYWlsLmNvbSIsImltcGVyc29uYXRpb24iOltdLCJjcmVhdGVkIjoxNzMyOTA0ODA4LCJyZWZyZXNoVGltZW91dCI6MTczMjkwNTQ0MSwidmVyaWZpZWQiOnRydWUsImlzcyI6InNlc3Npb24tc2VydmljZSIsInNlc3Npb25JZCI6IjI4OTFiYjQ4LWIwZTQtNDEwMi04ZjVhLWJhOTQzODkwODBhZSIsInN0ZXBVcHMiOltdLCJhdWQiOiJhdGxhc3NpYW4iLCJuYmYiOjE3MzI5MDQ4NDEsImV4cCI6MTczNTQ5Njg0MSwiaWF0IjoxNzMyOTA0ODQxLCJlbWFpbCI6InZhc2VrbmVudWJAZ21haWwuY29tIiwianRpIjoiMjg5MWJiNDgtYjBlNC00MTAyLThmNWEtYmE5NDM4OTA4MGFlIn0.eS-kQjUIFbh5BrlBpdObd1dGwix4z6_Qiawjp4LLTSR93GAXSWZLW6IOYEZ8l8kXw9ArIrTtSwFj3uC2bkXJswvgCUng8oom0g3xHdEtdfNpkOUqqt3tWFAWER1mSTGzssWkXDM53LPcsGA1n3AsTdZNGpy474vsUa0uK594Xu1McpR_9KaYNrZITnWBBxTrHFLq_Syf0-mRXhwmfZJHuEP1MFjY1VfgJbrhgO6gaOhTVnmKVEn1rqS-21F53Qy9C7p1HxYBTcZ2QEbehmPZQbiqXJ1DiPlaxYpr-F2w3VHv7-UipdNSeINhieVuSoQbt7kUguUXDZ1H8rSPKVCeEg"},
-    "login": "vaseknenub@gmail.com",
-    "password": "Lucifer153258789atl",
+        {"cloud.session.token": ""},
+    "login": "",
+    "password": "",
     "board":
         {
         "name":"+Доска",
